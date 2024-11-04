@@ -19,7 +19,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and push the Docker image
-        uses: docker/build-push-action@v4
+        uses: docker/build-push-action@v6
 
         with:
           context: .
@@ -28,7 +28,7 @@ jobs:
           tags: ${{ secrets.DOCKER_USERNAME }}/todoop-backend:${{ github.sha }}
 
       - name: Push with latest tag
-        uses: docker/build-push-action@v4
+        uses: docker/build-push-action@v6
         with:
           context: .
           file: ./docker-compose.yaml
