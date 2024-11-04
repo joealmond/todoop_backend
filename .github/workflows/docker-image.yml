@@ -26,6 +26,7 @@ jobs:
           file: ./docker-compose.yaml
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/todoop-backend:${{ github.sha }}
+          buildx: true
 
       - name: Push with latest tag
         uses: docker/build-push-action@v6
@@ -33,4 +34,5 @@ jobs:
           context: .
           file: ./docker-compose.yaml
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/todoop-backend:latest 
+          tags: ${{ secrets.DOCKER_USERNAME }}/todoop-backend:latest
+          buildx: true 
