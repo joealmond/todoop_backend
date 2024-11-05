@@ -5,5 +5,5 @@ export interface TestData {
 
 export const data: TestData = {
     title: "Test data",
-    description: "This Test data comming form an Express backend with Typescript."
+    description: "This test data comming form an Express backend with Typescript."
 };
