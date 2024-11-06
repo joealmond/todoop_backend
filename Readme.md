@@ -14,3 +14,4 @@
 Notes:
 - GH-Actions job to update image in Docker Registry on every push
 - CORS enabled for all routes for development purposes.
+- Initial admin password setup for MongoDB is possible in ./mongodb_password.txt

@@ -1,9 +1,9 @@
 export interface TestData {
     title: string;
-    description: string;
+    completed: boolean;
 }
 
 export const data: TestData = {
-    title: "Test data",
-    description: "This test data comming form an Express backend with Typescript."
+    title: "Test task",
+    completed: false
 };

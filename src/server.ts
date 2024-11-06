@@ -1,7 +1,8 @@
-import express, { Express, Request, Response } from "express"
+import express from "express"
 import dotenv from "dotenv";
 import cors from "cors";
-import { data } from "./data";
+import todoRoutes from "./routes/todos";
+import connectDB from "./db";
 
 dotenv.config();
 
@@ -11,9 +12,9 @@ const host = process.env.HOST || "0.0.0.0";
 
 app.use(cors());
 
-app.get("/", (req, res) => {
-    res.json(data);
-})
+app.use("/", todoRoutes);
+
+connectDB();
 
 app.listen(port, () => {
     console.log(`[server]: Server is listening on http://${host}:${port}`);

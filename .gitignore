@@ -3,3 +3,4 @@ dist
 .github
 .env
 .DS_Store
+mongodb_password.txt
